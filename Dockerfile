@@ -7,7 +7,8 @@ ENV PIP_NO_CACHE_DIR=on
 ENV PYTHONDONTWRITEBYTECODE=1
 
 RUN apt update -y && apt install python3 -y && apt install pip -y && \
-pip3 install requests --break-system-packages && pip3 install yt-dlp --break-system-packages
+pip3 install requests --break-system-packages && pip3 install yt-dlp --break-system-packages && \
+pip3 install flask --break-system-packages
 
 
 WORKDIR /root

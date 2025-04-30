@@ -2,8 +2,8 @@
 downloader-youtube-server
 
 
-## init 
+## docker build 
 
 ```sh
-python3 -m venv base
+docker build --no-cache -t downloader-youtube-server:20250430  -f Dockerfile .
 ```
