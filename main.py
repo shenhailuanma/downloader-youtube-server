@@ -17,8 +17,11 @@ def run_command(command):
 
 app = Flask(__name__)
 
-with open('config.json', 'r') as file:
-    config_data = json.load(file)
+try:
+    with open('config.json', 'r') as file:
+        config_data = json.load(file)
+except FileNotFoundError:
+    config_data = {"proxy":""}
 
 app.config.update(config_data)
 
